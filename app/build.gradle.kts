@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -51,5 +55,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    implementation(libs.coroutines.android)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.jwt)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    implementation(libs.kapt.room)
 
 }
